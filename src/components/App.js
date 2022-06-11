@@ -1,9 +1,22 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button'
+import Header from './Header'
+import NavBar from './NavBar'
+import PostList from './PostList'
+import Profile from './Profile'
+
+
+
 
 function App() {
-    return <Button>test</Button>
-
+    return (
+        <div>
+            <NavBar />
+            <Header />
+            <PostList />
+            <Profile />
+            <button>test</button>
+        </div>
+)
 }
 
 export default App
