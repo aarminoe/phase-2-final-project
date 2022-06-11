@@ -5,6 +5,7 @@ function Upload() {
     const [imageFile, setImageFile] = useState('')
     const [title, setTitle] = useState('')
     const [artistName, setArtistName] = useState('')
+    const [bio, setBio] = useState('')
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -14,13 +15,20 @@ function Upload() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(newPost)
+            body: JSON.stringify({
+                name: artistName,
+                image: imageFile,
+                title: title,
+                bio: bio,
+                likes: 0
+            })
         })
         .then(resp => resp.json())
         .then(data => console.log(data))
         setImageFile('')
         setTitle('')
         setArtistName('')
+        setBio('')
     }
     
     function handleImageFile(e) {
@@ -35,6 +43,10 @@ function Upload() {
     function handleArtist(e) {
         setArtistName(e.target.value)
         console.log(artistName)
+    }
+
+    function handleBio(e) {
+        setBio(e.target.value)
     }
 
     function clearForm() {
@@ -70,6 +82,15 @@ function Upload() {
                     onChange={handleArtist} 
                     type='text'
                     value={artistName}>
+                    </input>
+                </div>
+                <div>
+                    <p>About:</p>
+                    <input 
+                    className="bio-input" 
+                    onChange={handleBio} 
+                    type='text'
+                    value={bio}>
                     </input>
                 </div>
                 <p></p>
