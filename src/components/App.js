@@ -3,8 +3,10 @@ import { Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import NavBar from './NavBar'
 import ProfileList from './ProfileList'
+import Login from './Login'
 
 import Home from './Home'
+import Upload from './Upload'
 
 
 
@@ -16,7 +18,7 @@ function App() {
     useEffect(() => {
         fetch('http://localhost:3001/art')
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => setArtList(data))
     },[])
 
     return (
@@ -25,13 +27,18 @@ function App() {
             <NavBar />
             <Switch>
                 <Route path='/profile-list'>
-                    <ProfileList />
-                </Route>    
+                    <ProfileList artList={artList}/>
+                </Route>  
+                <Route path='/upload'>
+                    <Upload />    
+                </Route>
+                <Route path ='/login'>
+                    <Login artList={artList}/>    
+                </Route>  
                 <Route exact path='/'>
-                    <Home />
+                    <Home artList={artList}/>
                 </Route>
             </Switch>
-            <button>test</button>
         </div>
 )
 }

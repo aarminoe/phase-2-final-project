@@ -15,8 +15,23 @@ function NavBar() {
             <NavLink
                 exact
                 to='/profile-list'
+                activeStyle={{color: 'red'}}
             >
                 Artists
+            </NavLink>
+            <NavLink 
+                exact
+                to='/upload'
+                activeStyle={{color: 'red'}}
+            >
+                Upload
+            </NavLink>
+            <NavLink
+                exact
+                to='/login'
+                activeStyle={{color: 'red'}}
+            >
+                Login
             </NavLink>
         </div>
     )

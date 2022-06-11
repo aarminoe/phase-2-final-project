@@ -2,3 +2,36 @@ h1.header {
     text-align: left;
     margin-left: 150px;
 }
+
+.like-button {
+    width: 50px;
+}
+
+.artist-post-name {
+    font-size: larger;
+    
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2rem;
+}
+
+.card {
+    display: block;
+    grid-template-rows: repeat(auto-fill, minmax(12rem, 16rem));
+
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+
+.artist-avatar {
+    height: 200px;
+    width: 200px;
+}
