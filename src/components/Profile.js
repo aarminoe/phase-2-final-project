@@ -1,6 +1,7 @@
 import React from "react";
 
 function Profile({ artist }) {
+    console.log(artist)
     return (
     <div className="profile-card">
         <h1>{artist.name}</h1>

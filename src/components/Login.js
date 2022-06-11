@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
 function Login() {
-    return <h1>Login</h1>
+    return (
+        <div>
+            <p>Username</p>
+            <input type='text'></input>
+            <p>Password:</p>
+            <input type='text'></input>
+        </div>
+    )
 }
 
 export default Login
