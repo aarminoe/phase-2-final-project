@@ -4,11 +4,21 @@ import { NavLink } from 'react-router-dom'
 
 function NavBar() {
     return(
-        <nav>
-            hi
-            hi
-            hihihihihi
-        </nav>
+        <div>
+            <NavLink
+                exact
+                to='/'
+                activeStyle={{color: 'red'}}
+            >
+                Home
+            </NavLink>
+            <NavLink
+                exact
+                to='/profile-list'
+            >
+                Artists
+            </NavLink>
+        </div>
     )
 }
 
