@@ -16,7 +16,7 @@ function App() {
 
     const [artList, setArtList] = useState([])
     const [uploadUser, setUploadUser] = useState('')
-    const [uploadEnable, setUploadEnable] = useState(false)
+    const [logInEnable, setLogInEnable] = useState(false)
 
     useEffect(() => {
         fetch('http://localhost:3001/art')
@@ -24,9 +24,9 @@ function App() {
         .then(data => setArtList(data))
     },[])
 
-    function unlockUpload(user) {
+    function loggedIn(user) {
         setUploadUser(user)
-        setUploadEnable(true)
+        setLogInEnable(true)
     }
 
     function handleNewUpload(newUploadData) {
@@ -50,14 +50,14 @@ function App() {
                 </Route>  
                 <Route path='/upload'>
                     <Upload 
-                    uploadEnable={uploadEnable} 
+                    logInEnable={logInEnable} 
                     uploadUser={uploadUser}
                     onHandleNewUpload={handleNewUpload} />    
                 </Route>
                 <Route path ='/login'>
                     <Login 
                     artList={artList} 
-                    onUnlockUpload={unlockUpload}
+                    onLoggedIn={loggedIn}
                     />    
                 </Route>
                 <Route path='/create-profile'>
@@ -65,7 +65,7 @@ function App() {
                     onHandleNewUser={handleNewUser}/>
                 </Route>    
                 <Route exact path='/'>
-                    <Home artList={artList} uploadEnable={uploadEnable}/>
+                    <Home artList={artList} logInEnable={logInEnable}/>
                 </Route>
             </Switch>
         </div>

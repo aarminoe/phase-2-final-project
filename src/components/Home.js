@@ -1,10 +1,10 @@
 import React from "react";
 import PostList from './PostList'
 
-function Home({ artList, uploadEnable }) {
+function Home({ artList, logInEnable }) {
     return (
         <div>
-            <PostList artList={artList} uploadEnable={uploadEnable}/>
+            <PostList artList={artList} logInEnable={logInEnable}/>
         </div>
     )
 }

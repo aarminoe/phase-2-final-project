@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Upload({ uploadEnable, uploadUser, onHandleNewUpload }) {
+function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
 
     const [imageFile, setImageFile] = useState('')
     const [title, setTitle] = useState('')
@@ -8,7 +8,6 @@ function Upload({ uploadEnable, uploadUser, onHandleNewUpload }) {
     const [bio, setBio] = useState('')
     const [newUpload, setNewUpload] = useState(null)
 
-    console.log(uploadEnable)
     console.log(uploadUser)
 
     function handleSubmit(e) {
@@ -59,7 +58,7 @@ function Upload({ uploadEnable, uploadUser, onHandleNewUpload }) {
 
     return (
         <div>
-            {uploadEnable ? 
+            {logInEnable ? 
             <form onSubmit={handleSubmit} id="upload">
                 <div>
                     <p>Image File:</p>

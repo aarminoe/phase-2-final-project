@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Login({ artList, onUnlockUpload }) {
+function Login({ artList, onLoggedIn }) {
 
     console.log(artList)
 
@@ -33,8 +33,8 @@ function Login({ artList, onUnlockUpload }) {
         console.log(userArray)
         if (userArray.includes(user) && passArray.includes(password)) {
             setLogInError(false)
-            setLoggedIn((loggedIn) => !loggedIn)
-            onUnlockUpload(user)
+            setLoggedIn(true)
+            onLoggedIn(user)
         }
         else {
             setLogInError(true)

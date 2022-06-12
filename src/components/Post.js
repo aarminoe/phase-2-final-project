@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function Post({ artist, uploadEnable }) {
+function Post({ artist, logInEnable }) {
 
     console.log(artist)
 
@@ -31,7 +31,7 @@ function Post({ artist, uploadEnable }) {
             <h2 className="card-title">{artist.title}</h2>
             <p className="artist-post-name">By: {artist.name}</p>
             <p className="description">{artist.bio ? artist.bio : 'No bio added'}</p>
-            {uploadEnable ?
+            {logInEnable ?
                 <>
                     <button 
                     onClick={handleLike} 
