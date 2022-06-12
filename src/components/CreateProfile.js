@@ -21,7 +21,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
             setSignUpError(true)
             setNewUser('')
         }
-        else if (newUser === '' && newPass === ''){
+        else if (newUser === '' || newPass === ''){
             setUserPassError(true)
         }
         else {
