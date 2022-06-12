@@ -4,11 +4,12 @@ import { NavLink } from 'react-router-dom'
 
 function NavBar() {
     return(
-        <div>
+        <div className="navbar">
             <NavLink
                 exact
                 to='/'
                 activeStyle={{color: 'red'}}
+                className='navlink'
             >
                 Home
             </NavLink>
@@ -16,6 +17,7 @@ function NavBar() {
                 exact
                 to='/profile-list'
                 activeStyle={{color: 'red'}}
+                className='navlink'
             >
                 Artists
             </NavLink>
@@ -23,6 +25,7 @@ function NavBar() {
                 exact
                 to='/upload'
                 activeStyle={{color: 'red'}}
+                className='navlink'
             >
                 Upload
             </NavLink>
@@ -30,6 +33,7 @@ function NavBar() {
                 exact
                 to='/login'
                 activeStyle={{color: 'red'}}
+                className='navlink'
             >
                 Login
             </NavLink>
@@ -37,6 +41,7 @@ function NavBar() {
                 exact
                 to='/create-profile'
                 activeStyle={{color: 'red'}}
+                className='navlink'
             >
                 Create Profile
             </NavLink>

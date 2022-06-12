@@ -45,7 +45,7 @@ function Login({ artList, onUnlockUpload }) {
     return (
         <div>
             <form onSubmit={handleLoginSubmit}>
-                <p>Username</p>
+                <p>Username:</p>
                 <input
                 onChange={handleUser} 
                 value={user}

@@ -102,7 +102,7 @@ function Upload({ uploadEnable, uploadUser, onHandleNewUpload }) {
                     <button onClick={clearForm} className="submit-New">Submit</button>
                 </div>
             </form> :
-            "Please Log In in order to upload"
+            "Please Log in to upload"
             }
             
         </div>

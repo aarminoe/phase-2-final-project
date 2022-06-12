@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function Post({ artist }) {
+function Post({ artist, uploadEnable }) {
 
     console.log(artist)
 
@@ -31,14 +31,17 @@ function Post({ artist }) {
             <h2 className="card-title">{artist.title}</h2>
             <p className="artist-post-name">By: {artist.name}</p>
             <p className="description">{artist.bio ? artist.bio : 'No bio added'}</p>
-                <button 
-                onClick={handleLike} 
-                className="like-button">Like
-                </button>
-                <div value={likes}>
-                    {likes}
-                    
-                </div>
+            {uploadEnable ?
+                <>
+                    <button 
+                    onClick={handleLike} 
+                    className="like-button">Like
+                    </button>
+                    <div value={likes}>
+                        {likes}      
+                    </div> </>
+                    : 'Please Log in to like posts!'     
+            }    
             {/* <div>
                 <p>Comment</p>
                 <input className="comment" type='text'></input>

@@ -49,7 +49,7 @@ function CreateProfile({ onHandleNewUser }) {
     return (
         <div>
             <form onSubmit={handleNewUserSubmit}>
-                <p>Username</p>
+                <p>New Username:</p>
                 <input
                 onChange={handleNewUser}
                 value={newUser}

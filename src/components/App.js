@@ -65,7 +65,7 @@ function App() {
                     onHandleNewUser={handleNewUser}/>
                 </Route>    
                 <Route exact path='/'>
-                    <Home artList={artList}/>
+                    <Home artList={artList} uploadEnable={uploadEnable}/>
                 </Route>
             </Switch>
         </div>
