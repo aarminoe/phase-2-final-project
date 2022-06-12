@@ -54,3 +54,8 @@ body {
 .navlink:active {
     background-color: blueviolet;
 }
+
+.log-in-header {
+    text-align: right;
+    margin-right: 50px;
+}

@@ -42,8 +42,8 @@ function App() {
 
     return (
         <div>
-            <Header />
-            <NavBar />
+            <Header logInEnable={logInEnable} uploadUser={uploadUser}/>
+            <NavBar logInEnable={logInEnable}/>
             <Switch>
                 <Route path='/profile-list'>
                     <ProfileList artList={artList}/>
