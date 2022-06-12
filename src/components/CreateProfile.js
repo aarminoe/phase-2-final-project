@@ -7,10 +7,11 @@ function CreateProfile({ onHandleNewUser }) {
     const [newPass, setNewPass] = useState('')
     const [profilePic, setProfilePic] = useState('')
     const [newBio, setNewBio] = useState('')
+    const [successfulSignUp, setSuccessfulSignUp] = useState(false)
 
     function handleNewUserSubmit(e) {
         e.preventDefault()
-        fetch('http://localhost:3001/art', {
+        fetch('http://localhost:3001/artists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,6 +29,7 @@ function CreateProfile({ onHandleNewUser }) {
         setNewPass('')
         setProfilePic('')
         setNewBio('')
+        setSuccessfulSignUp(true)
     }
 
     function handleNewPass(e) {
@@ -76,6 +78,9 @@ function CreateProfile({ onHandleNewUser }) {
                 <p></p>
                 <button>Sign Up</button>
                 <p></p>
+                <p>
+                    {successfulSignUp ? <p>Thankyou for Signing up! Make sure to log in to be able to upload and like other Posts!</p> : null}
+                </p>
             </form>
         </div>
     )
