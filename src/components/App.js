@@ -61,7 +61,8 @@ function App() {
                     />    
                 </Route>
                 <Route path='/create-profile'>
-                    <CreateProfile 
+                    <CreateProfile
+                    artList={artList} 
                     onHandleNewUser={handleNewUser}/>
                 </Route>    
                 <Route exact path='/'>
