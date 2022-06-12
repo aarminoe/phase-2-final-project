@@ -6,8 +6,11 @@ function Profile({ artist }) {
     <div className="profile-card">
         <h1>{artist.name}</h1>
         <div className="artist-avatar">
-            {artist.avatar}
+            <img src={artist.profilePic} />
         </div>
+        <p>
+           Bio: {artist.bio}
+        </p>
     </div>
     )
 }

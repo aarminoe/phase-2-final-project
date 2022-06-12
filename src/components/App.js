@@ -35,6 +35,7 @@ function App() {
     }
 
     function handleNewUser(newUser) {
+        console.log(newUser)
         const updatedArtList = [...artList, newUser]
         setArtList(updatedArtList)
     }

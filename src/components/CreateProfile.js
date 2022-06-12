@@ -24,6 +24,10 @@ function CreateProfile({ onHandleNewUser }) {
         })
         .then(resp => resp.json())
         .then(data => onHandleNewUser(data))
+        setNewUser('')
+        setNewPass('')
+        setProfilePic('')
+        setNewBio('')
     }
 
     function handleNewPass(e) {
