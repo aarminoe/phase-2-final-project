@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 
-function Upload() {
+function Upload({ uploadEnable, uploadUser }) {
 
     const [imageFile, setImageFile] = useState('')
     const [title, setTitle] = useState('')
     const [artistName, setArtistName] = useState('')
     const [bio, setBio] = useState('')
 
+    console.log(uploadEnable)
+    console.log(uploadUser)
+
     function handleSubmit(e) {
         e.preventDefault()
-        const newPost = { imageFile, title, artistName}
         fetch('http://localhost:3001/art', {
             method: 'POST',
             headers: {
@@ -56,6 +58,7 @@ function Upload() {
 
     return (
         <div>
+            {uploadEnable ? 
             <form onSubmit={handleSubmit} id="upload">
                 <div>
                     <p>Image File:</p>
@@ -81,7 +84,7 @@ function Upload() {
                     className="artist-input" 
                     onChange={handleArtist} 
                     type='text'
-                    value={artistName}>
+                    value={uploadUser}>
                     </input>
                 </div>
                 <div>
@@ -97,7 +100,10 @@ function Upload() {
                 <div>
                     <button onClick={clearForm} className="submit-New">Submit</button>
                 </div>
-            </form>
+            </form> :
+            "Please Log In in order to upload"
+            }
+            
         </div>
     )
 }

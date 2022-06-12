@@ -14,12 +14,19 @@ import Upload from './Upload'
 function App() {
 
     const [artList, setArtList] = useState([])
+    const [uploadUser, setUploadUser] = useState('')
+    const [uploadEnable, setUploadEnable] = useState(false)
 
     useEffect(() => {
         fetch('http://localhost:3001/art')
         .then(resp => resp.json())
         .then(data => setArtList(data))
     },[])
+
+    function unlockUpload(user) {
+        setUploadUser(user)
+        setUploadEnable(true)
+    }
 
     return (
         <div>
@@ -30,10 +37,13 @@ function App() {
                     <ProfileList artList={artList}/>
                 </Route>  
                 <Route path='/upload'>
-                    <Upload />    
+                    <Upload uploadEnable={uploadEnable} uploadUser={uploadUser} />    
                 </Route>
                 <Route path ='/login'>
-                    <Login artList={artList}/>    
+                    <Login 
+                    artList={artList} 
+                    onUnlockUpload={unlockUpload}
+                    />    
                 </Route>  
                 <Route exact path='/'>
                     <Home artList={artList}/>

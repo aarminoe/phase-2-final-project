@@ -35,8 +35,9 @@ function Post({ artist }) {
                 onClick={handleLike} 
                 className="like-button">Like
                 </button>
-                <div>
+                <div value={likes}>
                     {likes}
+                    
                 </div>
             {/* <div>
                 <p>Comment</p>
