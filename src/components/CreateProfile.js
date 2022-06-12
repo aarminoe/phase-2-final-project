@@ -1,15 +1,29 @@
+import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 
-function CreateProfile() {
+function CreateProfile({ onHandleNewUser }) {
 
     const [newUser, setNewUser] = useState('')
     const [newPass, setNewPass] = useState('')
-    const [profilePic, setProfilePic] = useState('-')
+    const [profilePic, setProfilePic] = useState('')
     const [newBio, setNewBio] = useState('')
 
     function handleNewUserSubmit(e) {
         e.preventDefault()
-        console.log('ye')
+        fetch('http://localhost:3001/art', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: newUser,
+                password: newPass,
+                profilePic: profilePic,
+                bio: newBio
+            })
+        })
+        .then(resp => resp.json())
+        .then(data => onHandleNewUser(data))
     }
 
     function handleNewPass(e) {

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-function Upload({ uploadEnable, uploadUser }) {
+function Upload({ uploadEnable, uploadUser, onHandleNewUpload }) {
 
     const [imageFile, setImageFile] = useState('')
     const [title, setTitle] = useState('')
     const [artistName, setArtistName] = useState('')
     const [bio, setBio] = useState('')
+    const [newUpload, setNewUpload] = useState(null)
 
     console.log(uploadEnable)
     console.log(uploadUser)
@@ -26,7 +27,7 @@ function Upload({ uploadEnable, uploadUser }) {
             })
         })
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => onHandleNewUpload(data))
         setImageFile('')
         setTitle('')
         setArtistName('')

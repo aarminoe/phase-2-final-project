@@ -29,6 +29,16 @@ function App() {
         setUploadEnable(true)
     }
 
+    function handleNewUpload(newUploadData) {
+        const updatedArtList = [...artList, newUploadData]
+        setArtList(updatedArtList)
+    }
+
+    function handleNewUser(newUser) {
+        const updatedArtList = [...artList, newUser]
+        setArtList(updatedArtList)
+    }
+
     return (
         <div>
             <Header />
@@ -38,7 +48,10 @@ function App() {
                     <ProfileList artList={artList}/>
                 </Route>  
                 <Route path='/upload'>
-                    <Upload uploadEnable={uploadEnable} uploadUser={uploadUser} />    
+                    <Upload 
+                    uploadEnable={uploadEnable} 
+                    uploadUser={uploadUser}
+                    onHandleNewUpload={handleNewUpload} />    
                 </Route>
                 <Route path ='/login'>
                     <Login 
@@ -47,7 +60,8 @@ function App() {
                     />    
                 </Route>
                 <Route path='/create-profile'>
-                    <CreateProfile />
+                    <CreateProfile 
+                    onHandleNewUser={handleNewUser}/>
                 </Route>    
                 <Route exact path='/'>
                     <Home artList={artList}/>
