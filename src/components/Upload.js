@@ -18,7 +18,7 @@ function Upload({ uploadEnable, uploadUser }) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name: artistName,
+                name: uploadUser,
                 image: imageFile,
                 title: title,
                 bio: bio,

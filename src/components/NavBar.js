@@ -33,6 +33,13 @@ function NavBar() {
             >
                 Login
             </NavLink>
+            <NavLink
+                exact
+                to='/create-profile'
+                activeStyle={{color: 'red'}}
+            >
+                Create Profile
+            </NavLink>
         </div>
     )
 }

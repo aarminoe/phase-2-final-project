@@ -59,10 +59,10 @@ function Login({ artList, onUnlockUpload }) {
                 </input>
                 <p></p>
                 <button>Log In</button>
+                <p></p>
                 {loggedIn ? "You are Logged in, " + user : null}
-                {logInError ? 'No User/Password found, Please try again.' : null}
+                {logInError ? 'No User/Password found, Please try again or create a new account.' : null}
             </form>
-
         </div>
     )
 }

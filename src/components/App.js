@@ -4,6 +4,7 @@ import Header from './Header'
 import NavBar from './NavBar'
 import ProfileList from './ProfileList'
 import Login from './Login'
+import CreateProfile from './CreateProfile'
 
 import Home from './Home'
 import Upload from './Upload'
@@ -44,7 +45,10 @@ function App() {
                     artList={artList} 
                     onUnlockUpload={unlockUpload}
                     />    
-                </Route>  
+                </Route>
+                <Route path='/create-profile'>
+                    <CreateProfile />
+                </Route>    
                 <Route exact path='/'>
                     <Home artList={artList}/>
                 </Route>
