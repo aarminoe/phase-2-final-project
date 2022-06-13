@@ -57,7 +57,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
     }
 
     return (
-        <div>
+        <div className="component">
             {logInEnable ? 
             <form onSubmit={handleSubmit} id="upload">
                 <div>

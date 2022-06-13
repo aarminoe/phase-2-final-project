@@ -8,7 +8,7 @@ function NavBar() {
             <NavLink
                 exact
                 to='/'
-                activeStyle={{color: 'red'}}
+                activeStyle={{color: 'black'}}
                 className='navlink'
             >
                 Home
@@ -16,7 +16,7 @@ function NavBar() {
             <NavLink
                 exact
                 to='/profile-list'
-                activeStyle={{color: 'red'}}
+                activeStyle={{color: 'black'}}
                 className='navlink'
             >
                 Artists
@@ -24,7 +24,7 @@ function NavBar() {
             <NavLink 
                 exact
                 to='/upload'
-                activeStyle={{color: 'red'}}
+                activeStyle={{color: 'black'}}
                 className='navlink'
             >
                 Upload
@@ -32,7 +32,7 @@ function NavBar() {
             <NavLink
                 exact
                 to='/login'
-                activeStyle={{color: 'red'}}
+                activeStyle={{color: 'black'}}
                 className='navlink'
             >
                 Login
@@ -40,7 +40,7 @@ function NavBar() {
             <NavLink
                 exact
                 to='/create-profile'
-                activeStyle={{color: 'red'}}
+                activeStyle={{color: 'black'}}
                 className='navlink'
             >
                 Create Profile

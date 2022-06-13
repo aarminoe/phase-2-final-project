@@ -43,7 +43,7 @@ function Login({ artList, onLoggedIn, accounts }) {
 
 
     return (
-        <div>
+        <div className="component">
             <form onSubmit={handleLoginSubmit}>
                 <p>Username:</p>
                 <input

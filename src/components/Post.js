@@ -31,7 +31,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
         return null
     }
     return (
-        <div className="card">
+        <div >
             <div className="post">
                 <div className="image">
                     <img src={artist.image} alt="art!" width='400px'/>

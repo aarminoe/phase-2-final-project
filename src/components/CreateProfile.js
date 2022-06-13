@@ -69,7 +69,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
     }
 
     return (
-        <div>
+        <div className="component">
             <form onSubmit={handleNewUserSubmit}>
                 <p>New Username:</p>
                 <input
