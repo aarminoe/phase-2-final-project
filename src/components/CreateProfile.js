@@ -1,4 +1,4 @@
-import userEvent from "@testing-library/user-event";
+
 import React, { useState } from "react";
 
 function CreateProfile({ onHandleNewUser, artList }) {

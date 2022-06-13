@@ -31,13 +31,13 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
         return null
     }
     return (
-        <div >
+        <div className="card">
             <div className="post">
                 <div className="image">
-                    <img src={artist.image} alt="art!" width='400px'/>
+                    <img src={artist.image} alt="Image File Not Supported" width='400px'/>
                 </div>
                 <h2 className="card-title">{artist.title}</h2>
-                <p className="artist-post-name">By: {artist.name}</p>
+                <p className="artist-post-name">Uploaded By: {artist.name}</p>
                 <p className="description">{artist.bio ? artist.bio : 'No bio added'}</p>
                 {logInEnable ?
                     <>
