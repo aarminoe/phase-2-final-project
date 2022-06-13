@@ -30,6 +30,13 @@
       "profilePic": "fsafas",
       "bio": "gasg",
       "id": 4
+    },
+    {
+      "name": "newtest",
+      "password": "newtest",
+      "profilePic": "2",
+      "bio": "3",
+      "id": 5
     }
   ]
 }

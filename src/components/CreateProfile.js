@@ -19,10 +19,12 @@ function CreateProfile({ onHandleNewUser, artList }) {
         })
         if (artistNames.includes(newUser)) {
             setSignUpError(true)
+            setUserPassError(false)
             setNewUser('')
         }
         else if (newUser === '' || newPass === ''){
             setUserPassError(true)
+            setSignUpError(false)
         }
         else {
             fetch('http://localhost:3001/art', {
@@ -44,6 +46,8 @@ function CreateProfile({ onHandleNewUser, artList }) {
             setProfilePic('')
             setNewBio('')
             setSuccessfulSignUp(true)
+            setUserPassError(false)
+            setSignUpError(false)
         }
     }
 
