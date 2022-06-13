@@ -36,7 +36,8 @@ function CreateProfile({ onHandleNewUser, artList }) {
                     name: newUser,
                     password: newPass,
                     profilePic: profilePic,
-                    bio: newBio
+                    bio: newBio,
+                    likes: 0
                 })
             })
             .then(resp => resp.json())

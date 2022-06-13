@@ -23,32 +23,33 @@ function Post({ artist, logInEnable }) {
     }
 
     return (
-    <div className="card">
-        <div className="post">
-            <div className="image">
-                <img src={artist.image} alt="art!"/>
-            </div>
-            <h2 className="card-title">{artist.title}</h2>
-            <p className="artist-post-name">By: {artist.name}</p>
-            <p className="description">{artist.bio ? artist.bio : 'No bio added'}</p>
-            {logInEnable ?
-                <>
-                    <button 
-                    onClick={handleLike} 
-                    className="like-button">Like
-                    </button>
-                    <div value={likes}>
-                        {likes}      
-                    </div> </>
-                    : 'Please Log in to like posts!'     
-            }    
-            {/* <div>
-                <p>Comment</p>
-                <input className="comment" type='text'></input>
-            </div> */}
-        </div>
-    </div>
+        <div className="card">
+            <div className="post">
+                <div className="image">
+                    <img src={artist.image} alt="art!"/>
+                </div>
+                <h2 className="card-title">{artist.title}</h2>
+                <p className="artist-post-name">By: {artist.name}</p>
+                <p className="description">{artist.bio ? artist.bio : 'No bio added'}</p>
+                {logInEnable ?
+                    <>
+                        <button 
+                        onClick={handleLike} 
+                        className="like-button">Like
+                        </button>
+                        <div value={likes}>
+                            {likes}      
+                        </div> </>
+                        : 'Please Log in to like posts!'     
+                }    
+                    {/* <div>
+                        <p>Comment</p>
+                        <input className="comment" type='text'></input>
+                    </div> */}
+                </div>
+         </div>
     )
+
 }
 
 export default Post
