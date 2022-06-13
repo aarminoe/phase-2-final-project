@@ -6,7 +6,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
     const [title, setTitle] = useState('')
     const [artistName, setArtistName] = useState('')
     const [bio, setBio] = useState('')
-    const [newUpload, setNewUpload] = useState(null)
+    const [newUpload, setNewUpload] = useState(false)
 
     console.log(uploadUser)
 
@@ -31,6 +31,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
         setTitle('')
         setArtistName('')
         setBio('')
+        setNewUpload(true)
     }
     
     function handleImageFile(e) {
@@ -97,6 +98,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                     </input>
                 </div>
                 <p></p>
+                {newUpload ? <p>File Successfully Uploaded!</p> : null}
                 <div>
                     <button onClick={clearForm} className="submit-New">Submit</button>
                 </div>
