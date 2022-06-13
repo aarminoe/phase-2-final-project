@@ -34,100 +34,76 @@
       "id": 4
     },
     {
-      "name": "2",
-      "password": "2",
-      "profilePic": "2",
-      "bio": "2",
+      "name": "a",
+      "password": "a",
+      "profilePic": "",
+      "bio": "a",
       "likes": 0,
       "id": 5
     },
     {
-      "name": "1",
-      "image": "1",
-      "title": "1",
-      "bio": "1",
+      "name": "gfds",
+      "password": "gfd",
+      "profilePic": "",
+      "bio": "sgfd",
       "likes": 0,
       "id": 6
     },
     {
-      "name": "123",
-      "password": "123",
-      "profilePic": "213",
-      "bio": "123",
+      "name": "gfds",
+      "password": "gfd",
+      "profilePic": "sgdf",
+      "bio": "gfds",
       "likes": 0,
       "id": 7
     },
     {
-      "name": "456",
-      "password": "456",
-      "profilePic": "456",
-      "bio": "456",
+      "name": "gf",
+      "password": "fds",
+      "profilePic": "fds",
+      "bio": "afds",
       "likes": 0,
       "id": 8
     },
     {
-      "name": "d",
-      "password": "d",
+      "name": "fds",
+      "password": "fds",
       "profilePic": "",
-      "bio": "d",
+      "bio": "fds",
       "likes": 0,
       "id": 9
     },
     {
-      "name": "d",
-      "image": "f",
-      "title": "f",
-      "bio": "f",
+      "name": "1",
+      "image": "32",
+      "title": "32",
+      "bio": "32",
       "likes": 0,
       "id": 10
     },
     {
-      "name": "d",
-      "image": "g",
-      "title": "g",
-      "bio": "g",
+      "name": "1",
+      "image": "43",
+      "title": "43",
+      "bio": "43",
       "likes": 0,
       "id": 11
     },
     {
-      "name": "d",
-      "image": "j",
-      "title": "j",
-      "bio": "j",
+      "name": "1",
+      "image": "65",
+      "title": "65",
+      "bio": "65",
       "likes": 0,
       "id": 12
     },
     {
-      "name": "v",
-      "password": "v",
-      "profilePic": "v",
-      "bio": "v",
+      "name": "dsadas",
+      "password": "dsads",
+      "profilePic": "adsad",
+      "bio": "sads",
       "likes": 0,
       "id": 13
-    },
-    {
-      "name": "1",
-      "image": "1",
-      "title": "1",
-      "bio": "1",
-      "likes": 0,
-      "id": 14
-    },
-    {
-      "name": "1",
-      "image": "4142",
-      "title": "14214",
-      "bio": "421421",
-      "likes": 0,
-      "id": 15
-    },
-    {
-      "name": "1",
-      "image": "6546547",
-      "title": "745745",
-      "bio": "754754",
-      "likes": 0,
-      "id": 16
     }
   ]
 }

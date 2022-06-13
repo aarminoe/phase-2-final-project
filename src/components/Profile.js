@@ -5,7 +5,7 @@ function Profile({ artist }) {
 
     console.log(artist)
 
-    if(artist.profilePic) {
+    if(artist.profilePic || artist.profilePic === '') {
         return (
         <div className="profile-card">
             <h1>{artist.name}</h1>
