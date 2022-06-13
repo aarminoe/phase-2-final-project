@@ -34,7 +34,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
         <div className="card">
             <div className="post">
                 <div className="image">
-                    <img src={artist.image} alt="art!"/>
+                    <img src={artist.image} alt="art!" width='400px'/>
                 </div>
                 <h2 className="card-title">{artist.title}</h2>
                 <p className="artist-post-name">By: {artist.name}</p>
@@ -43,10 +43,10 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
                     <>
                         <button 
                         onClick={handleLike} 
-                        className="like-button">Like
+                        className="like-button">🤍
                         </button>
-                        <div value={likes}>
-                            {likes}      
+                        <div className="like-number" value={likes}>
+                            {likes} Likes      
                         </div> </>
                         : 'Please Log in to like posts!'     
                 }    

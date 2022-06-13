@@ -5,6 +5,7 @@ h1.header {
 
 .like-button {
     width: 50px;
+    background-color: rgb(79, 74, 74);
 }
 
 .artist-post-name {
@@ -13,14 +14,9 @@ h1.header {
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 2rem;
-}
-
-.card {
-    display: block;
-    grid-template-rows: repeat(auto-fill, minmax(12rem, 16rem));
-
+    margin: 0;
+    padding: 0;
+    font-family: hel
 }
 
 .post {
@@ -38,28 +34,43 @@ body {
 
 .navbar {
     display: flex;
+    background-color: black;
 }
 
 .navlink {
-    color: black;
+    color: whitesmoke;
+    font-size: larger;
+    text-decoration: none;
     margin-left: auto;
     margin-right: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .3s linear;
 }
 .navlink:hover {
-    color: aquamarine;
+    color: rgb(242, 159, 51);
 }
 
-.navlink:active {
-    background-color: blueviolet;
-}
 
 .log-in-header {
+    position: relative;
     text-align: right;
     margin-right: 50px;
+    color: whitesmoke;
+    bottom: 40px;
+    font-size: medium;
 }
 
 .delete {
     width: 100px;
+}
+
+.header {
+    font-style: italic;
+    background-image: linear-gradient(to right, white, black);
+    font-family: hel;
+}
+
+.like-number {
+    font-size: x-large;
+
 }
