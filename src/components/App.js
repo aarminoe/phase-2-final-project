@@ -44,6 +44,18 @@ function App() {
         setAccounts(updatedArtList)
     }
 
+    function handleDeletePost(artistPost) {
+        console.log(artistPost)
+        const updatedArtList = artList.filter((art) => {
+            return art !== artistPost
+        })
+        setArtList(updatedArtList)
+        fetch(`http://localhost:3001/art/${artistPost.id}`, {
+            method:'DELETE',
+        })
+        .then(resp => resp.json())
+    }
+
     return (
         <div>
             <Header logInEnable={logInEnable} uploadUser={uploadUser}/>
@@ -71,7 +83,11 @@ function App() {
                     onHandleNewUser={handleNewUser}/>
                 </Route>    
                 <Route exact path='/'>
-                    <Home artList={artList} logInEnable={logInEnable}/>
+                    <Home 
+                    artList={artList} 
+                    logInEnable={logInEnable}
+                    uploadUser={uploadUser}
+                    onHandleDelete={handleDeletePost}/>
                 </Route>
             </Switch>
         </div>

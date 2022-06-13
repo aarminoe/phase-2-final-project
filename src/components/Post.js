@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 
-function Post({ artist, logInEnable }) {
+function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
 
     console.log(artist)
+    console.log(uploadUser)
 
     const [likes, setLikes] = useState(artist.likes)
 
@@ -20,6 +21,10 @@ function Post({ artist, logInEnable }) {
         .then(resp => resp.json())
         .then(data => console.log(data))
         setLikes((likes) => likes + 1)
+    }
+
+    function onHandleDeleteClick() {
+        onHandleDelete(artist)
     }
 
     if (artist.profilePic) {
@@ -45,6 +50,7 @@ function Post({ artist, logInEnable }) {
                         </div> </>
                         : 'Please Log in to like posts!'     
                 }    
+                {uploadUser === artist.name ? <button className="delete" onClick={onHandleDeleteClick}>Delete Post</button> : null}
                     {/* <div>
                         <p>Comment</p>
                         <input className="comment" type='text'></input>
