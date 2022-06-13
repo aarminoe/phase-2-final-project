@@ -22,6 +22,9 @@ function Post({ artist, logInEnable }) {
         setLikes((likes) => likes + 1)
     }
 
+    if (artist.profilePic) {
+        return null
+    }
     return (
         <div className="card">
             <div className="post">

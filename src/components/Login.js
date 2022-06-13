@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Login({ artList, onLoggedIn }) {
+function Login({ artList, onLoggedIn, accounts }) {
 
     console.log(artList)
 
@@ -25,7 +25,7 @@ function Login({ artList, onLoggedIn }) {
         console.log(user)
         const userArray = []
         const passArray = []
-        artList.forEach((artist) => {
+        accounts.forEach((artist) => {
             userArray.push(artist.name)
             passArray.push(artist.password)
         })

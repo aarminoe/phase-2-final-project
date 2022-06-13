@@ -17,11 +17,15 @@ function App() {
     const [artList, setArtList] = useState([])
     const [uploadUser, setUploadUser] = useState('')
     const [logInEnable, setLogInEnable] = useState(false)
+    const [accounts, setAccounts] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:3001/art')
         .then(resp => resp.json())
-        .then(data => setArtList(data))
+        .then(data => {
+            setArtList(data)
+            setAccounts(data)
+        })
     },[])
 
     function loggedIn(user) {
@@ -37,7 +41,7 @@ function App() {
     function handleNewUser(newUser) {
         console.log(newUser)
         const updatedArtList = [...artList, newUser]
-        setArtList(updatedArtList)
+        setAccounts(updatedArtList)
     }
 
     return (
@@ -46,7 +50,7 @@ function App() {
             <NavBar logInEnable={logInEnable}/>
             <Switch>
                 <Route path='/profile-list'>
-                    <ProfileList artList={artList}/>
+                    <ProfileList artList={artList} accounts={accounts}/>
                 </Route>  
                 <Route path='/upload'>
                     <Upload 
@@ -56,7 +60,8 @@ function App() {
                 </Route>
                 <Route path ='/login'>
                     <Login 
-                    artList={artList} 
+                    artList={artList}
+                    accounts={accounts} 
                     onLoggedIn={loggedIn}
                     />    
                 </Route>

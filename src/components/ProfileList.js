@@ -1,9 +1,10 @@
 import Profile from './Profile'
 
-function ProfileList({ artList }) {
+function ProfileList({ artList, accounts }) {
+
     return (
         <div className='profile-list'>
-            {artList.map((artist) => {
+            {accounts.map((artist) => {
                 return <Profile key={artist.id} artist={artist} />
             })}
         </div>
