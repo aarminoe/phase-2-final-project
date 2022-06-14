@@ -95,7 +95,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJhKVAzPgcISPpDARcsBz3-6JGBjs7UgpYwg&usqp=CAU",
       "title": "Laura",
       "bio": "cherry pie and black coffee",
-      "likes": 0,
+      "likes": 5,
       "id": 17
     },
     {
@@ -145,6 +145,22 @@
       "bio": "yes yes yes yes yes yes yes",
       "likes": 0,
       "id": 23
+    },
+    {
+      "name": "test",
+      "password": "test",
+      "profilePic": "",
+      "bio": "test",
+      "likes": 0,
+      "id": 24
+    },
+    {
+      "name": "test2",
+      "password": "test2",
+      "profilePic": "",
+      "bio": "test2",
+      "likes": 0,
+      "id": 25
     }
   ]
 }

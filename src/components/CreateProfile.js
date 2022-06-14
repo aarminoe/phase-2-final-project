@@ -5,11 +5,13 @@ function CreateProfile({ onHandleNewUser, artList }) {
 
     const [newUser, setNewUser] = useState('')
     const [newPass, setNewPass] = useState('')
+    const [retypePass, setRetypePass] = useState('')
     const [profilePic, setProfilePic] = useState('')
     const [newBio, setNewBio] = useState('')
     const [successfulSignUp, setSuccessfulSignUp] = useState(false)
     const [signUpError, setSignUpError] = useState(false)
     const [userPassError, setUserPassError] = useState(false)
+    const [passMatch, setPassMatch] = useState(true)
 
     function handleNewUserSubmit(e) {
         e.preventDefault()
@@ -17,14 +19,22 @@ function CreateProfile({ onHandleNewUser, artList }) {
         artList.forEach((artist) => {
             artistNames.push(artist.name)
         })
+
         if (artistNames.includes(newUser)) {
             setSignUpError(true)
             setUserPassError(false)
             setNewUser('')
+            setPassMatch(true)
         }
         else if (newUser === '' || newPass === ''){
             setUserPassError(true)
             setSignUpError(false)
+            setPassMatch(true)
+        }
+        else if (retypePass !== newPass) {
+            setPassMatch(false)
+            setSignUpError(false)
+            setUserPassError(false)
         }
         else {
             fetch('http://localhost:3001/art', {
@@ -46,6 +56,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
             setNewPass('')
             setProfilePic('')
             setNewBio('')
+            setRetypePass('')
             setSuccessfulSignUp(true)
             setUserPassError(false)
             setSignUpError(false)
@@ -54,6 +65,10 @@ function CreateProfile({ onHandleNewUser, artList }) {
 
     function handleNewPass(e) {
         setNewPass(e.target.value)
+    }
+
+    function handleRetypePass(e) {
+        setRetypePass(e.target.value)
     }
     
     function handleNewUser(e) {
@@ -67,6 +82,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
     function handleNewBio(e) {
         setNewBio(e.target.value)
     }
+
 
     return (
         <div className="component">
@@ -83,7 +99,14 @@ function CreateProfile({ onHandleNewUser, artList }) {
                 className="input"
                 onChange={handleNewPass}
                 value={newPass}
-                type='text'>
+                type='password'>
+                </input>
+                <p className="input-prompt">Re-Type Password:</p>
+                <input
+                className="input"
+                onChange={handleRetypePass}
+                value={retypePass}
+                type='password'>
                 </input>
                 <p className="input-prompt">Profile Picture:</p>
                 <input
@@ -106,6 +129,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
                     {successfulSignUp ? 'Thankyou for Signing up! Make sure to log in to be able to upload and like other Posts!' : null}
                     {signUpError ? 'There already exists a User with that name. Please try again.' : null}
                     {userPassError ? 'Username or Password Empty. Please try again.': null}
+                    {passMatch ? null : 'Passwords Do Not Match. Please try again.'}
                 </p>
             </form>
         </div>

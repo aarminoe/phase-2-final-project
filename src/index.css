@@ -114,10 +114,11 @@ body {
 
 .card {
     transition: all .3s linear;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 70px;
     border-radius: 20px;
+
 }
 
 .card:hover {
