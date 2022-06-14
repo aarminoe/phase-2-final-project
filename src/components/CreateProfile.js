@@ -71,28 +71,28 @@ function CreateProfile({ onHandleNewUser, artList }) {
     return (
         <div className="component">
             <form onSubmit={handleNewUserSubmit} className='form'>
-                <p>New Username:</p>
+                <p className="input-prompt">New Username:</p>
                 <input
                 className="input"
                 onChange={handleNewUser}
                 value={newUser}
                 type='text'>
                 </input>
-                <p>Password:</p>
+                <p className="input-prompt">Password:</p>
                 <input
                 className="input"
                 onChange={handleNewPass}
                 value={newPass}
                 type='text'>
                 </input>
-                <p>Profile Picture:</p>
+                <p className="input-prompt">Profile Picture:</p>
                 <input
                 className="input"
                 onChange={handleProfPic}
                 value={profilePic}
                 type='text'>
                 </input>
-                <p>About You:</p>
+                <p className="input-prompt">About You:</p>
                 <textarea
                 className="text-area" 
                 onChange={handleNewBio}
@@ -100,7 +100,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
                 type='text'>
                 </textarea>
                 <p></p>
-                <button>Sign Up</button>
+                <button className="button">Sign Up</button>
                 <p></p>
                 <p>
                     {successfulSignUp ? 'Thankyou for Signing up! Make sure to log in to be able to upload and like other Posts!' : null}

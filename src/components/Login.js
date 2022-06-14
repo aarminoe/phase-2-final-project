@@ -45,14 +45,14 @@ function Login({ artList, onLoggedIn, accounts }) {
     return (
         <div className="component">
             <form onSubmit={handleLoginSubmit} className='form'>
-                <p>Username:</p>
+                <p className="input-prompt">Username:</p>
                 <input
                 className="input"
                 onChange={handleUser} 
                 value={user}
                 type='text'>
                 </input>
-                <p>Password:</p>
+                <p className="input-prompt">Password:</p>
                 <input
                 className="input"
                 onChange={handlePassword}
@@ -60,7 +60,7 @@ function Login({ artList, onLoggedIn, accounts }) {
                 type='text'>
                 </input>
                 <p></p>
-                <button>Log In</button>
+                <button className="button">Log In</button>
                 <p></p>
                 {loggedIn ? "You are Logged in, " + user : null}
                 {logInError ? 'No User/Password found, Please try again or create a new account.' : null}

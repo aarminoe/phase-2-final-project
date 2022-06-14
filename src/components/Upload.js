@@ -64,7 +64,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
             {logInEnable ? 
             <form onSubmit={handleSubmit} id="upload" className="form">
                 <div>
-                    <p>Image File:</p>
+                    <p className="input-prompt">Image File:</p>
                     <input 
                     className="input"
                     onChange={handleImageFile}
@@ -73,7 +73,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                     </input>
                 </div>
                 <div>
-                    <p>Title:</p>
+                    <p className="input-prompt">Title:</p>
                     <input 
                     className="input" 
                     onChange={handleTitle} 
@@ -82,7 +82,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                     </input>
                 </div>
                 <div>
-                    <p>Artist Name:</p>
+                    <p className="input-prompt">Artist Name:</p>
                     <input 
                     className="input" 
                     onChange={handleArtist} 
@@ -91,7 +91,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                     </input>
                 </div>
                 <div>
-                    <p>About:</p>
+                    <p className="input-prompt">About:</p>
                     <textarea
                     className="text-area" 
                     onChange={handleBio} 
@@ -102,7 +102,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                 <p></p>
                 {newUpload ? <p>File Successfully Uploaded!</p> : null}
                 <div>
-                    <button onClick={clearForm} className="submit-New">Submit</button>
+                    <button onClick={clearForm} className="button">Submit</button>
                 </div>
             </form> :
             "Please Log in to upload"
