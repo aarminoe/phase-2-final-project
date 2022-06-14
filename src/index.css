@@ -6,6 +6,11 @@ h1.header {
 .like-button {
     width: 50px;
     background-color: rgb(115, 111, 111);
+    transition: all 200ms linear;
+}
+
+.like-button:hover {
+    background-color: rgb(185, 42, 42);
 }
 
 .artist-post-name {
