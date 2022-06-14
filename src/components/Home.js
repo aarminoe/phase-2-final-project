@@ -3,7 +3,8 @@ import PostList from './PostList'
 
 function Home({ artList, logInEnable, uploadUser, onHandleDelete }) {
     return (
-        <div>
+        <div className="home">
+           
             <PostList 
             artList={artList} 
             logInEnable={logInEnable}

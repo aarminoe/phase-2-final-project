@@ -8,8 +8,6 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
     const [bio, setBio] = useState('')
     const [newUpload, setNewUpload] = useState(false)
 
-    console.log(uploadUser)
-
     function handleSubmit(e) {
         e.preventDefault()
 
@@ -33,13 +31,11 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
         setArtistName('')
         setBio('')
         setNewUpload(true)
-        console.log(imageFile)
     }
     
     function handleImageFile(e) {
         setImageFile(e.target.value)
     }
-    console.log(title)
 
     function handleTitle(e) {
         setTitle(e.target.value)
@@ -105,7 +101,8 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                     <button onClick={clearForm} className="button">Submit</button>
                 </div>
             </form> :
-            "Please Log in to upload"
+            <p className="form">Please Log in to upload</p>
+            
             }
             
         </div>

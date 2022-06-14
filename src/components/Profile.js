@@ -2,9 +2,6 @@ import React from "react";
 
 function Profile({ artist }) {
 
-
-    console.log(artist)
-
     if(artist.profilePic || artist.profilePic === '') {
         return (
         <div className="card">

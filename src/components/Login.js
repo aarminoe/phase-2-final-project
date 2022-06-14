@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-function Login({ artList, onLoggedIn, accounts }) {
-
-    console.log(artList)
+function Login({ onLoggedIn, accounts }) {
 
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
@@ -11,26 +9,20 @@ function Login({ artList, onLoggedIn, accounts }) {
 
     function handleUser(e) {
         setUser(e.target.value)
-        console.log(e.target.value)
     }
 
     function handlePassword(e) {
         setPassword(e.target.value)
-        console.log(e.target.value)
     }
 
     function handleLoginSubmit(e) {
         e.preventDefault()
-        console.log(password)
-        console.log(user)
         const userArray = []
         const passArray = []
         accounts.forEach((artist) => {
             userArray.push(artist.name)
             passArray.push(artist.password)
         })
-        console.log(passArray)
-        console.log(userArray)
         if (userArray.includes(user) && passArray.includes(password)) {
             setLogInError(false)
             setLoggedIn(true)
