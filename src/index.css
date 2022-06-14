@@ -103,3 +103,15 @@ body {
     width: 220px;
     height: 220px;
 }
+
+.card {
+    transition: all .3s linear;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.card:hover {
+    background-color: rgb(151, 151, 151);
+    transform: scale(1.02);
+}
