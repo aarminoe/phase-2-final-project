@@ -12,6 +12,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
 
     function handleSubmit(e) {
         e.preventDefault()
+
         fetch('http://localhost:3001/art', {
             method: 'POST',
             headers: {
@@ -32,6 +33,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
         setArtistName('')
         setBio('')
         setNewUpload(true)
+        console.log(imageFile)
     }
     
     function handleImageFile(e) {

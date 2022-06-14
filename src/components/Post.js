@@ -38,7 +38,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
                 </div>
                 <h2 className="card-title">{artist.title}</h2>
                 <p className="artist-post-name">Uploaded By: {artist.name}</p>
-                <p className="description">{artist.bio ? artist.bio : 'No bio added'}</p>
+                <p className="description">{artist.bio ? artist.bio : null}</p>
                 {logInEnable ?
                     <>
                         <button 

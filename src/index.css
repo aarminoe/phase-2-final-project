@@ -93,3 +93,8 @@ body {
 .have-a-look {
     font-style: italic;
 }
+
+.new-account-profile-pic {
+    width: 220px;
+    height: 220px;
+}
