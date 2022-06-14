@@ -62,11 +62,11 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
     return (
         <div className="component">
             {logInEnable ? 
-            <form onSubmit={handleSubmit} id="upload">
+            <form onSubmit={handleSubmit} id="upload" className="form">
                 <div>
                     <p>Image File:</p>
                     <input 
-                    className="image-file-input"
+                    className="input"
                     onChange={handleImageFile}
                     type='text'
                     value={imageFile}>    
@@ -75,7 +75,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                 <div>
                     <p>Title:</p>
                     <input 
-                    className="title-input" 
+                    className="input" 
                     onChange={handleTitle} 
                     type='text'
                     value={title}>
@@ -84,7 +84,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                 <div>
                     <p>Artist Name:</p>
                     <input 
-                    className="artist-input" 
+                    className="input" 
                     onChange={handleArtist} 
                     type='text'
                     value={uploadUser}>
@@ -92,12 +92,12 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                 </div>
                 <div>
                     <p>About:</p>
-                    <input 
-                    className="bio-input" 
+                    <textarea
+                    className="text-area" 
                     onChange={handleBio} 
                     type='text'
                     value={bio}>
-                    </input>
+                    </textarea>
                 </div>
                 <p></p>
                 {newUpload ? <p>File Successfully Uploaded!</p> : null}

@@ -70,31 +70,35 @@ function CreateProfile({ onHandleNewUser, artList }) {
 
     return (
         <div className="component">
-            <form onSubmit={handleNewUserSubmit}>
+            <form onSubmit={handleNewUserSubmit} className='form'>
                 <p>New Username:</p>
                 <input
+                className="input"
                 onChange={handleNewUser}
                 value={newUser}
                 type='text'>
                 </input>
                 <p>Password:</p>
                 <input
+                className="input"
                 onChange={handleNewPass}
                 value={newPass}
                 type='text'>
                 </input>
                 <p>Profile Picture:</p>
                 <input
+                className="input"
                 onChange={handleProfPic}
                 value={profilePic}
                 type='text'>
                 </input>
                 <p>About You:</p>
-                <input
+                <textarea
+                className="text-area" 
                 onChange={handleNewBio}
                 value={newBio}
                 type='text'>
-                </input>
+                </textarea>
                 <p></p>
                 <button>Sign Up</button>
                 <p></p>

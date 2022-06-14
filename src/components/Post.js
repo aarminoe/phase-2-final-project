@@ -36,25 +36,28 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
                 <div className="image">
                     <img src={artist.image} alt="Image File Not Supported" width='400px'/>
                 </div>
-                <h2 className="card-title">{artist.title}</h2>
-                <p className="artist-post-name">Uploaded By: {artist.name}</p>
-                <p className="description">{artist.bio ? artist.bio : null}</p>
-                {logInEnable ?
-                    <>
-                        <button 
-                        onClick={handleLike} 
-                        className="like-button">🤍
-                        </button>
-                        <div className="like-number" value={likes}>
-                            {likes} Likes      
-                        </div> </>
-                        : 'Please Log in to like posts!'     
-                }    
-                {uploadUser === artist.name ? <button className="delete" onClick={onHandleDeleteClick}>Delete Post</button> : null}
-                    {/* <div>
-                        <p>Comment</p>
-                        <input className="comment" type='text'></input>
-                    </div> */}
+                <div className="post-text">
+                    <h2 className="card-title">{artist.title}</h2>
+                    <p className="artist-post-name">Uploaded By: {artist.name}</p>
+                    <p className="description">{artist.bio ? artist.bio : null}</p>
+                    {logInEnable ?
+                        <>
+                            <button 
+                            onClick={handleLike} 
+                            className="like-button">🤍
+                            </button>
+                            <div className="like-number" value={likes}>
+                                {likes} Likes      
+                            </div> </>
+                            : 'Please Log in to like posts!'     
+                    }    
+                    {uploadUser === artist.name ? <button className="delete" onClick={onHandleDeleteClick}>Delete Post</button> : null}
+                        {/* <div>
+                            <p>Comment</p>
+                            <input className="comment" type='text'></input>
+                        </div> */}
+
+                </div>
                 </div>
          </div>
     )

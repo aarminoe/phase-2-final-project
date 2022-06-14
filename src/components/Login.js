@@ -44,15 +44,17 @@ function Login({ artList, onLoggedIn, accounts }) {
 
     return (
         <div className="component">
-            <form onSubmit={handleLoginSubmit}>
+            <form onSubmit={handleLoginSubmit} className='form'>
                 <p>Username:</p>
                 <input
+                className="input"
                 onChange={handleUser} 
                 value={user}
                 type='text'>
                 </input>
                 <p>Password:</p>
                 <input
+                className="input"
                 onChange={handlePassword}
                 value={password} 
                 type='text'>
