@@ -36,12 +36,17 @@ function App() {
     function handleNewUpload(newUploadData) {
         const updatedArtList = [...artList, newUploadData]
         setArtList(updatedArtList)
+        console.log(newUploadData)
     }
 
     function handleNewUser(newUser) {
         console.log(newUser)
         const updatedArtList = [...artList, newUser]
         setAccounts(updatedArtList)
+    }
+
+    function handleDate(date) {
+        console.log(date)
     }
 
     function handleDeletePost(artistPost) {
@@ -68,7 +73,8 @@ function App() {
                     <Upload 
                     logInEnable={logInEnable} 
                     uploadUser={uploadUser}
-                    onHandleNewUpload={handleNewUpload} />    
+                    onHandleNewUpload={handleNewUpload}
+                    onHandleDate={handleDate} />    
                 </Route>
                 <Route path ='/login'>
                     <Login 

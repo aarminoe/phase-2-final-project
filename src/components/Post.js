@@ -3,9 +3,6 @@ import React, { useState } from "react";
 
 function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
 
-    console.log(artist)
-    console.log(uploadUser)
-
     const [likes, setLikes] = useState(artist.likes)
 
     function handleLike() {
@@ -40,6 +37,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete }) {
                     <h2 className="card-title">{artist.title}</h2>
                     <p className="artist-post-name">Uploaded By: {artist.name}</p>
                     <p className="description">{artist.bio ? artist.bio : null}</p>
+                    <p className="date">Uploaded on: {artist.date}</p>
                     {logInEnable ?
                         <>
                             <button 

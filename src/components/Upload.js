@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
+function Upload({ logInEnable, uploadUser, onHandleNewUpload, onHandleDate }) {
 
     const [imageFile, setImageFile] = useState('')
     const [title, setTitle] = useState('')
@@ -10,7 +10,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-
+        const date = new Date()
         fetch('http://localhost:3001/art', {
             method: 'POST',
             headers: {
@@ -21,7 +21,8 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
                 image: imageFile,
                 title: title,
                 bio: bio,
-                likes: 0
+                likes: 0,
+                date: date.toLocaleString('en-US')
             })
         })
         .then(resp => resp.json())
@@ -31,6 +32,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
         setArtistName('')
         setBio('')
         setNewUpload(true)
+        onHandleDate(Date().toString())
     }
     
     function handleImageFile(e) {

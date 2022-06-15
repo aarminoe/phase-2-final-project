@@ -205,3 +205,36 @@ body {
     background-color: rgb(253, 64, 64);
     color: black;
 }
+
+.avatar-card {
+    margin-left: 50px;
+    margin-top: 20px;
+
+}
+
+.profile-name-header {
+    margin-left: 50px;
+    font-size: 50px;
+    margin-top: 30px;
+}
+
+.profile-about-me {
+    margin-left: 100px;
+    margin-top: 20px;
+   
+}
+
+.about-me {
+    margin-left: -30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.user-prof {
+    margin-top: -20px;
+}
+
+.prof-bio {
+    font-size: 20px;
+}

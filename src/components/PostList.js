@@ -7,7 +7,7 @@ function PostList({ artList, logInEnable, uploadUser, onHandleDelete }){
         <h1 className="have-a-look">You can't see me!</h1>
         {artList.map((artist) => {
             return <Post 
-            key={artist.name} 
+            key={artist.id} 
             artist={artist} 
             logInEnable={logInEnable} 
             uploadUser={uploadUser}
