@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from 'react-router-dom'
 
 
-function NavBar() {
+function NavBar({ uploadUser }) {
     return(
         <div className="navbar">
             <NavLink
@@ -44,6 +44,14 @@ function NavBar() {
                 className='navlink'
             >
                 Create Profile
+            </NavLink>
+            <NavLink
+                exact
+                to='/User'
+                activeStyle={{color: 'black'}}
+                className='navlink'
+            >
+                {uploadUser ? uploadUser : 'User'}
             </NavLink>
         </div>
     )

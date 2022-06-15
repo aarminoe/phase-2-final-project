@@ -60,7 +60,7 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload }) {
             {logInEnable ? 
             <form onSubmit={handleSubmit} id="upload" className="form">
                 <div>
-                    <p className="input-prompt">Image File:</p>
+                    <p className="input-prompt">Image URL:</p>
                     <input 
                     className="input"
                     onChange={handleImageFile}

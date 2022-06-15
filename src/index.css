@@ -62,8 +62,9 @@ body {
     text-align: right;
     margin-right: 50px;
     color: whitesmoke;
-    bottom: 40px;
-    font-size: medium;
+    bottom: 80px;
+    font-size: large;
+
 }
 
 .delete {
@@ -185,4 +186,22 @@ body {
 .profile-list {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbESHOP5wwJs5icG30efKaxM6XbmoLno6z8w&usqp=CAU');
     margin-top: -80px;
+}
+
+.header-tag{
+    font-size: medium;
+    margin-top: -13px;
+    margin-left: 100px;
+}
+
+.logout {
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: black;
+    transition: all .5s linear;
+}
+
+.logout:hover {
+    background-color: rgb(253, 64, 64);
+    color: black;
 }

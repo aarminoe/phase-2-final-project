@@ -49,7 +49,7 @@ function Login({ onLoggedIn, accounts }) {
                 className="input"
                 onChange={handlePassword}
                 value={password} 
-                type='text'>
+                type='password'>
                 </input>
                 <p></p>
                 <button className="button">Log In</button>

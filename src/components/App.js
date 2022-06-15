@@ -5,7 +5,7 @@ import NavBar from './NavBar'
 import ProfileList from './ProfileList'
 import Login from './Login'
 import CreateProfile from './CreateProfile'
-
+import User from './User'
 import Home from './Home'
 import Upload from './Upload'
 
@@ -59,7 +59,7 @@ function App() {
     return (
         <div>
             <Header logInEnable={logInEnable} uploadUser={uploadUser}/>
-            <NavBar logInEnable={logInEnable}/>
+            <NavBar logInEnable={logInEnable} uploadUser={uploadUser}/>
             <Switch>
                 <Route path='/profile-list'>
                     <ProfileList artList={artList} accounts={accounts}/>
@@ -81,7 +81,13 @@ function App() {
                     <CreateProfile
                     artList={artList} 
                     onHandleNewUser={handleNewUser}/>
-                </Route>    
+                </Route> 
+                <Route path='/user'>
+                    <User 
+                    uploadUser={uploadUser}
+                    artList={artList} 
+                    />
+                </Route>
                 <Route exact path='/'>
                     <Home 
                     artList={artList} 
