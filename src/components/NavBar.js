@@ -19,7 +19,7 @@ function NavBar({ uploadUser }) {
                 activeStyle={{color: 'black'}}
                 className='navlink'
             >
-                Artists
+                Community
             </NavLink>
             <NavLink 
                 exact

@@ -16,6 +16,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
     function handleNewUserSubmit(e) {
         e.preventDefault()
         const artistNames = []
+        const date = new Date()
         artList.forEach((artist) => {
             artistNames.push(artist.name)
         })
@@ -47,7 +48,8 @@ function CreateProfile({ onHandleNewUser, artList }) {
                     password: newPass,
                     profilePic: profilePic,
                     bio: newBio,
-                    likes: 0
+                    likes: 0,
+                    date: date.toLocaleString('en-US')
                 })
             })
             .then(resp => resp.json())
@@ -60,6 +62,7 @@ function CreateProfile({ onHandleNewUser, artList }) {
             setSuccessfulSignUp(true)
             setUserPassError(false)
             setSignUpError(false)
+            
         }
     }
 
