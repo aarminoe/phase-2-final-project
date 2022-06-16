@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./Post";
 
-function PostList({ artList, logInEnable, uploadUser, onHandleDelete }){
+function PostList({ artList, logInEnable, uploadUser, onHandleDelete, onHandleComment }){
     return (
     <>
         <h1 className="have-a-look">You can't see me!</h1>
@@ -11,7 +11,8 @@ function PostList({ artList, logInEnable, uploadUser, onHandleDelete }){
             artist={artist} 
             logInEnable={logInEnable} 
             uploadUser={uploadUser}
-            onHandleDelete={onHandleDelete}/>
+            onHandleDelete={onHandleDelete}
+            onHandleComment={onHandleComment}/>
         })}
     </>
     )

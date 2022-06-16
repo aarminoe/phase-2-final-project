@@ -22,7 +22,9 @@ function Upload({ logInEnable, uploadUser, onHandleNewUpload, onHandleDate }) {
                 title: title,
                 bio: bio,
                 likes: 0,
-                date: date.toLocaleString('en-US')
+                date: date.toLocaleString('en-US'),
+                comment: [],
+                from: []
             })
         })
         .then(resp => resp.json())

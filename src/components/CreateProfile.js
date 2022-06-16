@@ -49,7 +49,8 @@ function CreateProfile({ onHandleNewUser, artList }) {
                     profilePic: profilePic,
                     bio: newBio,
                     likes: 0,
-                    date: date.toLocaleString('en-US')
+                    date: date.toLocaleString('en-US'),
+                    comment: []
                 })
             })
             .then(resp => resp.json())

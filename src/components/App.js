@@ -61,6 +61,11 @@ function App() {
         .then(resp => resp.json())
     }
 
+    function handleComment(comment) {
+        const updatedArtList = [...artList, comment]
+        setArtList(updatedArtList)
+    }
+
     return (
         <div>
             <Header logInEnable={logInEnable} uploadUser={uploadUser}/>
@@ -99,7 +104,8 @@ function App() {
                     artList={artList} 
                     logInEnable={logInEnable}
                     uploadUser={uploadUser}
-                    onHandleDelete={handleDeletePost}/>
+                    onHandleDelete={handleDeletePost}
+                    onHandleComment={handleComment}/>
                 </Route>
             </Switch>
         </div>

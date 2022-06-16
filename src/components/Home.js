@@ -1,7 +1,7 @@
 import React from "react";
 import PostList from './PostList'
 
-function Home({ artList, logInEnable, uploadUser, onHandleDelete }) {
+function Home({ artList, logInEnable, uploadUser, onHandleDelete,onHandleComment }) {
     return (
         <div className="home">
            
@@ -9,7 +9,8 @@ function Home({ artList, logInEnable, uploadUser, onHandleDelete }) {
             artList={artList} 
             logInEnable={logInEnable}
             uploadUser={uploadUser}
-            onHandleDelete={onHandleDelete}/>
+            onHandleDelete={onHandleDelete}
+            onHandleComment={onHandleComment}/>
         </div>
     )
 }
