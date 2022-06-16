@@ -66,6 +66,35 @@ function App() {
         setArtList(updatedArtList)
     }
 
+    function handleDeleteComment(badComment, artist) {
+        console.log(badComment)
+        console.log(artist)
+        let commentIndex = artist.comment.indexOf(badComment)
+        // artList.forEach((art) => {
+        //     if (art.comment.includes(badComment)) {
+        //         commentIndex = art.comment.indexOf(badComment)
+        //     }
+        // })
+        // const updatedArtList = artList.filter((art) => {
+        //     return !art.comment.includes(badComment)
+        // })
+        console.log(commentIndex)
+
+
+        fetch(`http://localhost:3001/art/${artist.id}`, {
+            method:'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                comment: [...artist.comment.filter((comment) => {
+                    return comment !== badComment
+                })]
+            })
+        })
+        .then(resp => resp.json())
+    }
+
     return (
         <div>
             <Header logInEnable={logInEnable} uploadUser={uploadUser}/>
@@ -105,7 +134,8 @@ function App() {
                     logInEnable={logInEnable}
                     uploadUser={uploadUser}
                     onHandleDelete={handleDeletePost}
-                    onHandleComment={handleComment}/>
+                    onHandleComment={handleComment}
+                    onHandleDeleteComment={handleDeleteComment}/>
                 </Route>
             </Switch>
         </div>

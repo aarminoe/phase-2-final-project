@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import Comment from "./Comment"
 
-function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment }) {
+function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment, onHandleDeleteComment }) {
 
     const [likes, setLikes] = useState(artist.likes)
     const [comment, setComment] = useState(null)
-    const [commentList, setCommentList] = useState([])
+    const [commentList, setCommentList] = useState(null)
     const [seeComments, setSeeComments] = useState(false)
     const [artistPicked, setArtistPicked] = useState(null)
     const [commentAdded, setCommentAdded] = useState(false)
@@ -53,6 +53,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment
         })
         setComment('')   
         setCommentAdded(true) 
+        setCommentList(comment)
     }
 
     function onHandleDeleteClick() {
@@ -107,7 +108,11 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment
 
                                     <div className="comments">
                                     {artist.comment ? artist.comment.map((comment) => {
-                                     return <Comment comment={comment} uploadUser={uploadUser} artist={artist}/>
+                                     return <Comment 
+                                     comment={comment} 
+                                     uploadUser={uploadUser} 
+                                     artist={artist}
+                                     onHandleDeleteComment={onHandleDeleteComment}/>
                                     }): null}
                                     </div> 
                                 </> :

@@ -249,6 +249,7 @@ body {
     border-style: groove;
     width: 400px;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 .comment-btn {
@@ -272,4 +273,16 @@ body {
 
 .date {
     font-style: italic;
+}
+
+.delete-comment {
+    margin-left: 400px;
+    background-color: black ;
+    color: whitesmoke;
+    transition: all .3s linear;
+}
+
+.delete-comment:hover {
+    background-color: rgb(253, 64, 64);
+    color: black;
 }

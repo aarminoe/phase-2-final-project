@@ -13,7 +13,7 @@ function Profile({ artist }) {
                 <p className="artist-bio">
                 {artist.bio ? artist.bio : "No Bio Added."}
                 </p>
-                <p>Joined on {artist.date}</p>
+                <p className="date">Joined on {artist.date}</p>
             </div>
         </div>
         )
