@@ -8,6 +8,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment
     const [commentList, setCommentList] = useState([])
     const [seeComments, setSeeComments] = useState(false)
     const [artistPicked, setArtistPicked] = useState(null)
+    const [commentAdded, setCommentAdded] = useState(false)
 
     function handleLike() {
         fetch(`http://localhost:3001/art/${artist.id}`, {
@@ -50,7 +51,8 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment
             console.log(data)
             //setCommentList([...commentList, data])
         })
-        setComment('')    
+        setComment('')   
+        setCommentAdded(true) 
     }
 
     function onHandleDeleteClick() {
@@ -61,6 +63,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment
         setSeeComments((seeComments) => !seeComments)
         setArtistPicked(artist)
         console.log(artistPicked)
+        
     }
 
     if (artist.profilePic) {
@@ -98,6 +101,7 @@ function Post({ artist, logInEnable, uploadUser, onHandleDelete, onHandleComment
                                         <input className="comment" type='text' placeholder="Leave a Comment..." onChange={handleComment} value={comment}></input>
                                         <button className="plus-button">+</button>
                                     </form>
+                                    {commentAdded ? <p>Comment Added!</p> : null}
 
 
 
